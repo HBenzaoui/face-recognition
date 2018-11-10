@@ -84,7 +84,7 @@ class App extends Component {
 
   onBtnSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-      fetch('http://localhost:3000/imageUrl', {
+      fetch('https://arcane-chamber-79976.herokuapp.com/imageUrl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -94,7 +94,7 @@ class App extends Component {
       .then(response => response.json()) 
       .then(response => {
         if(response){
-          fetch('http://localhost:3000/image', {
+          fetch('https://arcane-chamber-79976.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
